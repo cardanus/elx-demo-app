@@ -1,0 +1,20 @@
+<div class="jumbotron">
+  <h2><%= gettext "Welcome to %{name}", name: "Cardanus!" %></h2>
+  <p class="lead">An applicatio wich show<br />how we can do experiments with different propose to user.</p>
+</div>
+
+<div class="col-lg-6">
+    <%= link "Frontend`s experiment",
+        to: front_experiment_path(@conn, :index),
+        class: "btn btn-primary btn-lg",
+        name: "frontend_experement_button"
+    %>
+</div>
+
+<div class="col-lg-6">
+    <%= link "Backend`s experiment",
+        to: back_experiment_path(@conn, :index),
+        class: "btn btn-primary btn-lg",
+        name: "backend_experement_button"
+    %>
+</div>

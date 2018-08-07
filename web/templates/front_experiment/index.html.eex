@@ -1,0 +1,21 @@
+<h2>Show frontend experiment</h2>
+<div class="text-center">
+  <table class="table">
+    <thead>
+      <tr>
+        <th> Press button for subscribe </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="text-right">
+          <%=
+            link Enum.join(["Subscribe for ", @period, " ", @period_desc]),
+            to: front_experiment_path(@conn, :show, @price),
+            class: "btn btn-default btn-xs"
+           %>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

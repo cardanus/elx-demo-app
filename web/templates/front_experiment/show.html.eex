@@ -1,0 +1,1 @@
+<h1> For subsribe you should pay <%= @price %> EUR </h1>
