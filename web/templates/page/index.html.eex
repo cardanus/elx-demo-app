@@ -3,18 +3,16 @@
   <p class="lead">An applicatio wich show<br />how we can do experiments with different propose to user.</p>
 </div>
 
-<div class="col-lg-6">
+<div class="btn-subscribe">
     <%= link "Frontend`s experiment",
         to: front_experiment_path(@conn, :index),
-        class: "btn btn-primary btn-lg",
+        class: "btn btn-primary btn-lg btn-sub",
         name: "frontend_experement_button"
     %>
-</div>
 
-<div class="col-lg-6">
     <%= link "Backend`s experiment",
-        to: back_experiment_path(@conn, :index),
-        class: "btn btn-primary btn-lg",
-        name: "backend_experement_button"
+            to: back_experiment_path(@conn, :index),
+            class: "btn btn-primary btn-lg btn-sub",
+            name: "backend_experement_button"
     %>
 </div>

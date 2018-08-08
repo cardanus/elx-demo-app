@@ -4,7 +4,7 @@ defmodule Elxdemoapp.Mixfile do
   def project do
     [app: :elxdemoapp,
      version: "0.0.1",
-     elixir: "~> 1.2",
+     elixir: "~> 1.6.6",
      elixirc_paths: elixirc_paths(Mix.env),
      compilers: [:phoenix, :gettext] ++ Mix.compilers,
      build_embedded: Mix.env == :prod,
@@ -18,8 +18,8 @@ defmodule Elxdemoapp.Mixfile do
   # Type `mix help compile.app` for more information.
   def application do
     [mod: {Elxdemoapp, []},
-     applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex]]
+     applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext, :phoenix_ecto, :postgrex,
+       :erlexp]]
   end
 
   # Specifies which paths to compile per environment.
@@ -37,7 +37,9 @@ defmodule Elxdemoapp.Mixfile do
      {:phoenix_html, "~> 2.6"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:gettext, "~> 0.11"},
-     {:cowboy, "~> 1.0"}]
+     {:cowboy, "~> 1.0"},
+     {:erlexp, github: "cardanus/erlexp", branch: "master", override: true}
+    ]
   end
 
   # Aliases are shortcuts or tasks specific to the current project.

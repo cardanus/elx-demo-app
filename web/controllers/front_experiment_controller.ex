@@ -1,9 +1,16 @@
 defmodule Elxdemoapp.FrontExperimentController do
   use Elxdemoapp.Web, :controller
-
+  alias Elxdemoapp.Helpers.CreateCookie
 
   def index(conn, _params) do
-    subscribe_info = subscribe_info_year()
+#    {variants_cookie, new_conn} = CreateCookie.select_variants_cookie(conn, :users_variants_cookies)
+
+
+    variants_cookie = Map.get(conn.req_cookies, "_elxdemoapp_key")
+    :io.format("~nconn:~p~n", [conn])
+    :io.format("~nvariants_cookie:~p~n", [variants_cookie])
+    variant = :erlexp.variant(variants_cookie, :req_cookies)
+    subscribe_info = variants(variant)
     render(
       conn, "index.html",
       price: subscribe_info.price,
@@ -16,11 +23,11 @@ defmodule Elxdemoapp.FrontExperimentController do
     render(conn, "show.html", price: month)
   end
 
-  def subscribe_info_month() do
+  def variants(:a) do
     %{period: 1, period_desc: "month", price: 12 }
   end
 
-  def subscribe_info_year() do
+  def variants(:b) do
     %{period: 12, period_desc: "monthes", price: 144 }
   end
 end
