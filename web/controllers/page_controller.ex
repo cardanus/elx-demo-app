@@ -3,7 +3,8 @@ defmodule Elxdemoapp.PageController do
   alias Elxdemoapp.Helpers.CreateCookie
 
   def index(conn, _params) do
-    CreateCookie.add_variants_cookie(conn, :users_variants_cookie)
+    coockie_name = Application.get_env(:elxdemoapp, :coockie_name)
+    CreateCookie.add_variants_cookie(conn, coockie_name)
     |> render("index.html")
   end
 

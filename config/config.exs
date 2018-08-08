@@ -7,7 +7,8 @@ use Mix.Config
 
 # General application configuration
 config :elxdemoapp,
-  ecto_repos: [Elxdemoapp.Repo]
+  ecto_repos: [Elxdemoapp.Repo],
+  coockie_name: "_elxdemoapp_key"
 
 # Configures the endpoint
 config :elxdemoapp, Elxdemoapp.Endpoint,
