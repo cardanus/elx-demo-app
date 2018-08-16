@@ -1,18 +1,12 @@
 <div class="jumbotron">
-  <h2><%= gettext "Welcome to %{name}", name: "Cardanus!" %></h2>
-  <p class="lead">An applicatio wich show<br />how we can do experiments with different propose to user.</p>
+  <h2><%= gettext "Welcome to %{name}", name: "demo" %></h2>
+  <p class="lead">Simple application with experiment.</p>
 </div>
 
 <div class="btn-subscribe">
-    <%= link "Frontend`s experiment",
+    <%= link "Land to experiment",
         to: front_experiment_path(@conn, :index),
         class: "btn btn-primary btn-lg btn-sub",
         name: "frontend_experement_button"
-    %>
-
-    <%= link "Backend`s experiment",
-            to: back_experiment_path(@conn, :index),
-            class: "btn btn-primary btn-lg btn-sub",
-            name: "backend_experement_button"
     %>
 </div>
