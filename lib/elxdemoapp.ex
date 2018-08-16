@@ -8,8 +8,6 @@ defmodule Elxdemoapp do
 
     # Define workers and child supervisors to be supervised
     children = [
-      # Start the Ecto repository
-      supervisor(Elxdemoapp.Repo, []),
       # Start the endpoint when the application starts
       supervisor(Elxdemoapp.Endpoint, []),
       # Start your own worker by calling: Elxdemoapp.Worker.start_link(arg1, arg2, arg3)
