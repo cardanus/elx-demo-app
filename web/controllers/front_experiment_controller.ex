@@ -15,6 +15,6 @@ defmodule Elxdemoapp.FrontExperimentController do
   end
 
   def gen_button_content(:a), do: "Yes, I want!"
-  def gen_button_content(:b), do: "No, but I want to earn 16%!"
+  def gen_button_content(:b), do: "No! I want to earn 16%!"
 
 end

@@ -1,8 +1,10 @@
 <div class="text-center">
-     <h2>Do you want to deposit with us?</h2>
+    <h2>Do you want to deposit with us?</h2>
+    <div class="btn-subscribe">
      <%=
          link @content,
          to: "/frontend_experiment",
-         class: "btn btn-default btn-xs"
-     %>
+         class: "btn btn-primary btn-lg btn-sub"
+       %>
+    </div>
 </div>
