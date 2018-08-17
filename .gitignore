@@ -23,5 +23,5 @@ erl_crash.dump
 # Ignore test coverage reports                                                                                          
 /cover                                                                                                                  
 
-/priv/static/
+/priv/
 /node_modules

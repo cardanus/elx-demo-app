@@ -3,11 +3,11 @@ defmodule Elxdemoapp.FrontExperimentController do
   alias Elxdemoapp.Helpers.UserId
 
   def index(conn, _params) do
-    variant = conn
-      |> UserId.build_id()
-      |> :erlexp.variant("acceptable_subscription_period")
+    subscribe_info = conn
+      |> UserId.fetch()
+      |> :erlexp.variant("year_subscribtion") # "year_subscribtion" is experiment name
+      |> gen_price()
 
-    subscribe_info = variants(variant)
     render(
       conn, "index.html",
       price: subscribe_info.price,
@@ -16,15 +16,18 @@ defmodule Elxdemoapp.FrontExperimentController do
     )
   end
 
+  # old version with monthly price
+  def gen_price(:a) do
+    %{period: 1, period_desc: "month", price: 12 }
+  end
+
+  # new version with yearly price
+  def gen_price(:b) do
+    %{period: 1, period_desc: "year", price: 144 }
+  end
+
   def show(conn, %{"id" => month}) do
     render(conn, "show.html", price: month)
   end
 
-  def variants(:a) do
-    %{period: 1, period_desc: "month", price: 12 }
-  end
-
-  def variants(:b) do
-    %{period: 1, period_desc: "year", price: 144 }
-  end
 end
