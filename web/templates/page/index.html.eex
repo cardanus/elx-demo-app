@@ -15,7 +15,7 @@
 
 <div class="text-center" style="float:right;">
     <%= link "Go to our Dashboard prototype",
-        to: "http://mexico.duty.kiev.ua:8001/",
+        to: "http://144.76.158.244:8080/",
         class: "btn btn-primary btn-lg btn-sub",
         name: "frontend_experement_button"
     %>
