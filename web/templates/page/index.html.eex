@@ -5,9 +5,17 @@
   <div>So if you open it in another browser or from another IP, different version probably will be allocated for you.</div>
 </div>
 
-<div class="btn-subscribe">
+<div class="text-center" style="float:left;">
     <%= link "Land to experiment",
         to: front_experiment_path(@conn, :index),
+        class: "btn btn-primary btn-lg btn-sub",
+        name: "frontend_experement_button"
+    %>
+  </div>
+
+<div class="text-center" style="float:right;">
+    <%= link "Go to our Dashboard prototype",
+        to: "http://mexico.duty.kiev.ua:8001/",
         class: "btn btn-primary btn-lg btn-sub",
         name: "frontend_experement_button"
     %>
