@@ -1,8 +1,6 @@
 defmodule Elxdemoapp.Endpoint do
   use Phoenix.Endpoint, otp_app: :elxdemoapp
 
-  socket "/socket", Elxdemoapp.UserSocket
-
   # Serve at "/" the static files from "priv/static" directory.
   #
   # You should set gzip to true if you are running phoenix.digest
@@ -21,11 +19,6 @@ defmodule Elxdemoapp.Endpoint do
 
   plug Plug.RequestId
   plug Plug.Logger
-
-  plug Plug.Parsers,
-    parsers: [:urlencoded, :multipart, :json],
-    pass: ["*/*"],
-    json_decoder: Poison
 
   plug Plug.MethodOverride
   plug Plug.Head

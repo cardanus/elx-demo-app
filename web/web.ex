@@ -16,16 +16,6 @@ defmodule Elxdemoapp.Web do
   below.
   """
 
-  def model do
-    quote do
-      use Ecto.Schema
-
-      import Ecto
-      import Ecto.Changeset
-      import Ecto.Query
-    end
-  end
-
   def controller do
     quote do
       use Phoenix.Controller
@@ -35,7 +25,6 @@ defmodule Elxdemoapp.Web do
       import Ecto.Query
 
       import Elxdemoapp.Router.Helpers
-      import Elxdemoapp.Gettext
     end
   end
 
@@ -51,7 +40,6 @@ defmodule Elxdemoapp.Web do
 
       import Elxdemoapp.Router.Helpers
       import Elxdemoapp.ErrorHelpers
-      import Elxdemoapp.Gettext
     end
   end
 
@@ -61,16 +49,6 @@ defmodule Elxdemoapp.Web do
     end
   end
 
-  def channel do
-    quote do
-      use Phoenix.Channel
-
-      alias Elxdemoapp.Repo
-      import Ecto
-      import Ecto.Query
-      import Elxdemoapp.Gettext
-    end
-  end
 
   @doc """
   When used, dispatch to the appropriate controller/view/etc.
