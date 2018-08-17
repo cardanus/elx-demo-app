@@ -1,8 +1,8 @@
 <div class="text-center">
-     <h2>Show frontend experiment</h2>
+     <h2>Do you want to deposit with us?</h2>
      <%=
-         link Enum.join(["Subscribe for ", @price, " EUR per ", @period, " ", @period_desc]),
-         to: front_experiment_path(@conn, :show, @price),
+         link @content,
+         to: "/frontend_experiment",
          class: "btn btn-default btn-xs"
      %>
 </div>

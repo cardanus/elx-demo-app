@@ -4,12 +4,3 @@
   display: flex;
   justify-content: space-evenly;
 }
-
-@media screen and (max-width: 600px) {
-  .btn-subscribe {
-    flex-direction: column;
-  }
-  .btn-sub {
-    margin-bottom: 20px;
-  }
-}

@@ -1,6 +1,8 @@
-<div class="jumbotron">
-  <h2>Welcome to Demo</h2>
-  <p class="lead">Simple application with experiment.</p>
+<div class="jumbotron bgisland">
+  <h2>Welcome to The Demo</h2>
+  <p class="lead" style="margin-top: 20px;">When you land to the next page A or B version of it will be showed.</p>
+  <div style="margin-bottom:20px;">For simplification experiment sticks to the combination of UserIP+UserAgent, but any kind of customer identification may be used.</div>
+  <div>So if you open it in another browser or from another IP, different version probably will be allocated for you.</div>
 </div>
 
 <div class="btn-subscribe">
